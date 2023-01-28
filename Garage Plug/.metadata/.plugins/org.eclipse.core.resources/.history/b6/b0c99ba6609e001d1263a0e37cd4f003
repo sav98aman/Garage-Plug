@@ -1,0 +1,15 @@
+package com.app.exception;
+
+import java.time.LocalDateTime;
+
+import lombok.*;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+public class AppError {
+	private LocalDateTime timestamp;//localDate ANdTime use
+	private String message;// ErrorMeassage 
+	private String desc;//Description
+}

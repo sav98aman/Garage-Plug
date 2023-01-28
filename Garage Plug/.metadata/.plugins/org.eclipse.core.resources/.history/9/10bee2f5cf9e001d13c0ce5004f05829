@@ -1,0 +1,6 @@
+package com.app.message.service;
+
+public interface Message {
+	
+	public void sendMail();
+}

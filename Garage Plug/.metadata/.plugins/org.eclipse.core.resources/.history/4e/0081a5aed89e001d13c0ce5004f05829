@@ -1,0 +1,6 @@
+password.invalid=password should be combination of one-uppercase,one-lowwercase and special charcahter [a-zA-Z0-9_]*$
+password.length=password length must be grater than 5 and less than 15
+name.firstName=please enter first Name should be grater than 2
+name.LastName=please enter last name
+mobile.invalid=Please Enter correct Mobile Number
+email.invalid=Please Enter correct Email address

@@ -1,0 +1,29 @@
+package com.app.customer.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.app.exception.CustomerException;
+import com.app.model.Customer;
+import com.app.model.CustomerType;
+
+@Service
+public class CustomerServiceImpl implements CustomerService {
+
+	@Autowired
+	private CustomerDao customerdao;
+	
+	private CurrentSessionDao currentsessiondao;
+	
+	@Override
+	public Customer create_Customer(Customer customer) throws CustomerException {
+		
+		Customer IsCustomer_allReady=customerdao.findByCustomer_Phone(customer.getCustomer_Phone());
+		if (IsCustomer_allReady != null) {
+			throw new CustomerException("This Phone"+customer.getCustomer_Phone()+"  Is  Register  \n Please Login ");
+		}
+		customer.setCustomer_Type(CustomerType.REGULAR);// by Default;
+		return customerdao.save(customer);
+		
+	}
+
+}

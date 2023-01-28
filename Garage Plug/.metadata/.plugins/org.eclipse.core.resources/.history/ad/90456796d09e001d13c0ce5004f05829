@@ -1,0 +1,10 @@
+package com.app.message.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public interface MessageService {
+	
+	public void sendMail9();
+	public void sendMail19();
+}

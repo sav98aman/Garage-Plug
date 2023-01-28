@@ -1,0 +1,2 @@
+password.invalid=password should be combination of one-uppercase,one-lowwercase and special charcahter [a-zA-Z0-9_]*$
+password.length=password length must be grater than 5 and less than 15

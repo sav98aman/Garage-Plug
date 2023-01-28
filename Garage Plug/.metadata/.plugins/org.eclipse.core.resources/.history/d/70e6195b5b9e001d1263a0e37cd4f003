@@ -1,0 +1,22 @@
+package com.app.model;
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.ManyToOne;
+
+import lombok.*;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Orders {
+	
+	private Integer order_Id;
+	private String product_Id;
+	private Integer customer_Id;
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Customer customers;
+	
+}

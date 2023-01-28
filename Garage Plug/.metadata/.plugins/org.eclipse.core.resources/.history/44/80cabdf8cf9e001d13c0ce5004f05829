@@ -1,0 +1,11 @@
+package com.app.message.service;
+
+public class MessageServiceImpl implements Message {
+
+	@Override
+	public void sendMail() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

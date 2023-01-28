@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=Garage_Plug/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.app.customer.service{CustomerService.java[CustomerService" modifiers="513" timestamp="1674893085033"/>
+    <typeInfo handle="=Garage_Plug/C:\/Users\/Aman_pc\/.m2\/repository\/org\/springframework\/spring-core\/5.3.25\/spring-core-5.3.25.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework=/=/maven.artifactId=/spring-core=/=/maven.version=/5.3.25=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.core(OrderComparator$OrderSourceProvider.class[OrderSourceProvider" modifiers="1545" timestamp="1674833597509"/>
+    <typeInfo handle="=Garage_Plug/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.app.orders.service{OrdersService.java[OrdersService" modifiers="513" timestamp="1674844672170"/>
+    <typeInfo handle="=Garage_Plug/C:\/Users\/Aman_pc\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/2.7.7\/spring-data-jpa-2.7.7.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-jpa=/=/maven.version=/2.7.7=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1674833476463"/>
+</typeInfoHistroy>

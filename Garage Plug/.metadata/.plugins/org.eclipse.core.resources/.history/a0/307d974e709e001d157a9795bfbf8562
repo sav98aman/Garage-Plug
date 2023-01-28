@@ -1,0 +1,6 @@
+package com.app.orders.service;
+
+public interface OrdersService {
+
+	public createOrders(String customer_Id,products id) throws OrdersException;
+}

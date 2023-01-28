@@ -1,0 +1,19 @@
+package com.app.message.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class MessageServiceImpl implements Message {
+
+	@Override
+	public void sendMail9() {
+		// TODO Auto-generated method stub
+
+	}
+	@Override
+	public void sendMail19() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

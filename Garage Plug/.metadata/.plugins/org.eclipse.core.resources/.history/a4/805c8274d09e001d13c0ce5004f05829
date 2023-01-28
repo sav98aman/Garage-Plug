@@ -1,0 +1,7 @@
+package com.app.message.service;
+
+public interface Message {
+	
+	public void sendMail9();
+	public void sendMail19();
+}

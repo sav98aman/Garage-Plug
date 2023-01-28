@@ -1,0 +1,28 @@
+package com.app.model;
+
+import javax.persistence.*;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import lombok.*;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+public class Customer {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer customer_Id;
+	
+	
+	private CustomerType Customer_Type;
+
+	private String Customer_Name;
+	private String Customer_Phone;
+	
+	@Size(min=5,max=8,message = "password size must be min 3 and max 10")
+	private String Password;
+	
+}

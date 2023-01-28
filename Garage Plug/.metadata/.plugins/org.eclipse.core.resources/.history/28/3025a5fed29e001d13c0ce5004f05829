@@ -1,0 +1,73 @@
+package com.app.orders.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.app.dao.CustomerDao;
+import com.app.dao.OrdersDao;
+import com.app.exception.OrdersException;
+import com.app.message.service.MessageService;
+import com.app.model.Customer;
+import com.app.model.CustomerType;
+import com.app.model.Orders;
+
+@Service
+public class OrdersServiceImpl implements OrdersService {
+
+	@Autowired
+	private OrdersDao ordersdao;
+	@Autowired
+	private CustomerDao customerDao;
+	
+	@Autowired
+	private MessageService messageservice;
+	
+	@Override
+	public Orders createOrders(Integer customer_Id, Integer product_id) throws OrdersException {
+		
+		Optional<Customer> customer_opt=customerDao.findById(customer_Id);
+		if(customer_opt.isEmpty()) {
+			throw new OrdersException("Please Register First ");
+		}
+		
+		List<Orders> customer_Orders_List=ordersdao.findByCustomers(customer_opt.get());
+		
+		Orders orders=new Orders();
+		orders.setCustomers(customer_opt.get() );
+		orders.setProduct_Id(product_id);
+		if(customer_Orders_List.size()>=10 || customer_Orders_List.size()<=19) {
+			orders.setDiscount_in_percent(10);
+		}else if(customer_Orders_List.size()>=20) {
+			orders.setDiscount_in_percent(20);
+		}else {
+			orders.setDiscount_in_percent(0);
+		}
+		
+		
+		
+		
+		if(customer_Orders_List.size()==9) {
+			messageservice.sendMail9();
+			
+		}
+		if(customer_Orders_List.size()==19) {
+			messageservice.sendMail19();
+		}
+		if(customer_Orders_List.size()==10) {
+			// update to customer gold
+			Customer customer=customer_opt.get();
+			customer.setCustomer_Type(CustomerType.GOLD);
+		}
+		if(customer_Orders_List.size()==20) {
+			// update to customer Paltinum
+			Customer customer=customer_opt.get();
+			customer.setCustomer_Type(CustomerType.PLATINUM);
+		}
+		
+		
+		return ordersdao.save(orders);
+	}
+
+}

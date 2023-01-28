@@ -1,0 +1,9 @@
+package com.app.customer.service;
+
+import com.app.exception.CustomerException;
+import com.app.model.Customer;
+
+public interface CustomerService {
+
+	public Customer create_Customer(Customer customer) throws CustomerException;
+}

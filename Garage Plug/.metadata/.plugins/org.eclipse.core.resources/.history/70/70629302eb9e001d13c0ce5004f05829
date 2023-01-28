@@ -1,0 +1,9 @@
+package com.app.orders.service;
+
+import com.app.exception.OrdersException;
+import com.app.model.Orders;
+
+public interface OrdersService {
+
+	public Orders createOrders(Integer customer_Id,Integer product_id) throws OrdersException;
+}

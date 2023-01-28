@@ -1,0 +1,18 @@
+package com.app.model;
+
+import java.time.LocalDateTime;
+
+import javax.persistence.Column;
+import javax.persistence.Id;
+
+public class CurrentSession {
+	
+	@Id
+	@Column(unique = true)
+	private Integer customer_id;
+	@Column(name = "uuid")
+	private String uuid;
+	@Column(name = "timeStamp")
+	private LocalDateTime timestamp;
+	
+}

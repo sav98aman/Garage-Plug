@@ -1,0 +1,14 @@
+package com.app.model;
+
+import lombok.*;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Orders {
+	
+	private Integer order_Id;
+	private String product_Id;
+	private Integer customer_Id;
+	
+}
